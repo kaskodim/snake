@@ -1,19 +1,17 @@
 import {
-    STYLE_CELL,
-    STYLE_FIELD,
+    CLASS_NAMES,
     NUMBER_SQUARES_ROUNDED_Y,
     NUMBER_SQUARES_ROUNDED_X,
     ALL_SQUARES,
-    AXIS_X,
-    AXIS_Y,
-    SEPARATOR,
-    settings
+    settings,
 } from "../constants.js";
+
+import { formatId } from "./idHelper.js";
 
 export function createField() {
     const field = document.createElement('div');
     document.body.append(field);
-    field.classList.add(STYLE_FIELD);
+    field.classList.add(CLASS_NAMES.FIELD);
 
     field.style.setProperty('--cellSizeWidth', settings.cellSizeWidth + 'px');
     field.style.setProperty('--cellSizeHeight', settings.cellSizeHeight + 'px');
@@ -25,15 +23,15 @@ export function createField() {
     let coordinateY = NUMBER_SQUARES_ROUNDED_Y;
 
     for (let i = 0; i < ALL_SQUARES; i++) {
-        let cell = document.createElement('div');
+        const cell = document.createElement('div');
         field.append(cell);
-        cell.classList.add(STYLE_CELL);
+        cell.classList.add(CLASS_NAMES.CELL);
 
         if (coordinateX > NUMBER_SQUARES_ROUNDED_X) {
             coordinateX = 1;
             coordinateY--;
         }
-        cell.id = AXIS_X + coordinateX + SEPARATOR + AXIS_Y + coordinateY;
+        cell.id = formatId(coordinateX, coordinateY);
         coordinateX++;
     }
 }
