@@ -8,5 +8,7 @@ export function addStyleSnake() {
             snake[i].classList.add(CLASS_NAMES.SNAKE_BODY);
         }
     }
-    return
+    else {
+        console.error('snake is not defined');
+    }
 }

@@ -7,12 +7,25 @@ export const settings = {
     speedFast: 45,
 };
 
+export const parameters = {
+    direction: '',
+    speed: settings.speedDefault,
+    food: '',
+}
+
 export const CLASS_NAMES = {
     FIELD: 'field',
     CELL: 'cell',
     SNAKE_HEAD: 'snakeHead',
     SNAKE_BODY: 'snakeBody',
     FOOD: 'food',
+}
+
+export const DIRECTIONS_MOV = {
+    RIGHT: 'right',
+    LEFT: 'left',
+    UP: 'up',
+    DOWN: 'down',
 }
 
 const NUMBER_SQUARES_X = settings.fieldSizeWidth / settings.cellSizeWidth;
