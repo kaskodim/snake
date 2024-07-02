@@ -2,9 +2,10 @@ import { addStyleSnake } from "./addStyleSnake.js";
 import { createField } from "./createField.js";
 import { createFood } from "./createFood.js";
 import { createInitialSnake } from "./createInitialSnake.js";
-import { setDefaultSpeed } from "./setDefaultSpeed.js";
+
 import { move } from "./move.js";
-import { snakeControl } from "./snakeControl.js";
+import { updateParams } from "./updateParams.js";
+import { params, settings } from "../constants.js";
 
 export function main() {
     createField();
@@ -13,15 +14,14 @@ export function main() {
     createFood();
     move();
 
-    document.addEventListener('keydown', snakeControl);
-    document.addEventListener('keyup', setDefaultSpeed);
+    document.addEventListener('keydown', (event) => {
+        if (event.repeat) return;
+        updateParams(event.code);
+    });
+
+    document.addEventListener('keyup', (event) => {
+        if (event.code === 'Space') {
+            params.speed = settings.speedDefault;
+        }
+    });
 }
-
-
-
-
-
-
-
-
-

@@ -11,6 +11,7 @@ export const params = {
     direction: '',
     speed: settings.speedDefault,
     food: null,
+    snake: [],
 }
 
 export const CLASS_NAMES = {
@@ -40,5 +41,3 @@ export const FIELD_CELL_CENTER_Y = Math.round(NUMBER_SQUARES_ROUNDED_Y / 2);
 export const AXIS_X = 'X';
 export const AXIS_Y = 'Y';
 export const SEPARATOR = '-';
-
-export const snake = [];
