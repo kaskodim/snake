@@ -7,10 +7,10 @@ export const settings = {
     speedFast: 45,
 };
 
-export const parameters = {
+export const params = {
     direction: '',
     speed: settings.speedDefault,
-    food: '',
+    food: null,
 }
 
 export const CLASS_NAMES = {
@@ -21,7 +21,7 @@ export const CLASS_NAMES = {
     FOOD: 'food',
 }
 
-export const DIRECTIONS_MOV = {
+export const MOVE_DIRECTIONS = {
     RIGHT: 'right',
     LEFT: 'left',
     UP: 'up',
