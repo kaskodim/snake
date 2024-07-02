@@ -6,7 +6,7 @@ import {
     settings,
 } from "../constants.js";
 
-import { formatId } from "./idHelper.js";
+import { formatId } from './helpers/idHelper.js'
 
 export function createField() {
     const field = document.createElement('div');
