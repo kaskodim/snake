@@ -11,8 +11,9 @@ export function main() {
     createField();
     createInitialSnake();
     addStyleSnake();
-    createFood();
     move();
+    createFood();
+
 
     document.addEventListener('keydown', (event) => {
         if (event.repeat) return;

@@ -1,4 +1,4 @@
-import { CLASS_NAMES, params,} from "../constants.js";
+import { CLASS_NAMES, params, } from "../constants.js";
 import { createFood } from "./createFood.js";
 
 export function eatFoodIfNeed() {
