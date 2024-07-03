@@ -1,8 +1,8 @@
 export const settings = {
     cellSizeWidth: 20,
     cellSizeHeight: 20,
-    fieldSizeWidth: 420,
-    fieldSizeHeight: 420,
+    fieldSizeWidth: 400,
+    fieldSizeHeight: 400,
     speedDefault: 300,
     speedFast: 45,
 };
@@ -12,6 +12,7 @@ export const params = {
     speed: settings.speedDefault,
     food: null,
     snake: [],
+    idCollection: new Set(),
 }
 
 export const CLASS_NAMES = {

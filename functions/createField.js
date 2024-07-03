@@ -4,6 +4,7 @@ import {
     NUMBER_SQUARES_ROUNDED_X,
     ALL_SQUARES,
     settings,
+    params,
 } from "../constants.js";
 
 import { formatId } from './helpers/idHelper.js'
@@ -32,6 +33,7 @@ export function createField() {
             coordinateY--;
         }
         cell.id = formatId(coordinateX, coordinateY);
+        params.idCollection.add(cell.id);
         coordinateX++;
     }
 }
