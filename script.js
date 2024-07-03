@@ -1,3 +1,4 @@
-import { main } from "./functions/main.js";
+import { startGame } from "./functions/startGame.js";
 
-main();
+const buttonStart = document.getElementById('start');
+buttonStart.onclick = startGame;

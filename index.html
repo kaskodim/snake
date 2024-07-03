@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Змейка</title>
-    <link rel="shortcut icon" href="icon.png" type="image/png">
+    <link rel="shortcut icon" href="./images/icon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    
+
     <script type="module" src="script.js" defer></script>
 </head>
+
 <body>
-    
+
+    <div class="store" id="store">store: </div>
+    <div class="record" id="record">record:</div>
+
+    <div class="menuContainer" id="menuContainer">
+
+        <img src="./images/logoGame.png" class="logoGame" alt="я - змея" />
+        <div class="logoText" id="logoText">Game SNAKE</div>
+
+        <div class="levelGame" id="levelGame">
+            <label for="levelEasy" class="lebel levelEasy">
+                <input type="radio" class="radioText" id="levelEasy" name="levelname" value="levelEasy" checked />
+                <span>levelEasy</span>
+            </label>
+
+            <label for="levelMedium" class="lebel levelMedium">
+                <input type="radio" class="radioText" id="levelMedium" name="levelname" value="levelMedium" />
+                <span>levelMedium</span>
+            </label>
+
+            <label for="levelHard" class="lebel levelHard">
+                <input type="radio" class="radioText" id="levelHard" name="levelname" value="levelHard" />
+                <span>levelHard</span>
+            </label>
+        </div>
+
+        <button class="start" id="start">Start</button>
+    </div>
 </body>
+
 </html>

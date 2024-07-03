@@ -8,7 +8,80 @@ body {
   background-color: antiquewhite;
   display: flex;
   margin: 0;
+  user-select: none;
+  font-size: 20px;
+}
 
+.store {
+  width: 200px;
+  height: 50px;
+  border: 1px solid blue;
+  position: absolute;
+}
+
+.record {
+  width: 200px;
+  height: 50px;
+  border: 1px solid blue;
+  position: absolute;
+  right: 0;
+}
+
+.menuContainer {
+  max-width: 200px;
+  background-color: rgba(15, 240, 27, 0.324);
+  border: 3px solid rgb(5, 44, 5);
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.logoGame {
+  padding: 20px;
+}
+
+.logoText {
+  padding: 20px;
+  background-color: rgba(0, 0, 255, 0.187);
+}
+
+.levelGame {
+  display: flex;
+  flex-direction: column;
+}
+
+.levelEasy {
+  height: 40px;
+  background-color: rgba(0, 128, 0, 0.543);
+  display: flex;
+  align-items: center;
+}
+
+.levelMedium {
+  height: 40px;
+  background-color: rgba(255, 255, 0, 0.669);
+  display: flex;
+  align-items: center;
+}
+
+.levelHard {
+  height: 40px;
+  background-color: rgba(255, 0, 0, 0.548);
+  display: flex;
+  align-items: center;
+}
+
+.radioText {
+  margin-left: 45px;
+}
+
+.start {
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  margin: 5px auto;
 }
 
 .field {
