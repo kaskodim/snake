@@ -33,7 +33,7 @@ export function createField() {
             coordinateY--;
         }
         cell.id = formatId(coordinateX, coordinateY);
-        params.collectionId = params.collectionId.add(cell.id);
+        params.idCollection.add(cell.id);
         coordinateX++;
     }
 }

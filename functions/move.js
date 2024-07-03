@@ -19,10 +19,6 @@ export function move() {
 
 function moveSnake() {
 
-  for (let i = 0; i < params.snake.length; i++) {
-    params.collectionId.delete(params.snake[i].id);
-  }
-
   const coordSnakeHead = parseId(params.snake[0].id);
   params.snake[0].classList.remove(CLASS_NAMES.SNAKE_HEAD);
   params.snake[params.snake.length - 1].classList.remove(CLASS_NAMES.SNAKE_BODY);
@@ -34,14 +30,14 @@ function moveSnake() {
     if (XHead < NUMBER_SQUARES_ROUNDED_X) {
 
       params.snake.unshift(getElementByCoords(XHead + 1, YHead));
-      params.collectionId.delete(params.snake[0].id);
-      params.collectionId.add((params.snake[params.snake.length - 1]).id);
+      params.idCollection.delete(params.snake[0].id);
+      params.idCollection.add((params.snake[params.snake.length - 1]).id);
       params.snake.pop();
     } else {
 
       params.snake.unshift(getElementByCoords(1, YHead));
-      params.collectionId.delete(params.snake[0].id);
-      params.collectionId.add((params.snake[params.snake.length - 1]).id);
+      params.idCollection.delete(params.snake[0].id);
+      params.idCollection.add((params.snake[params.snake.length - 1]).id);
       params.snake.pop();
     }
   }
@@ -50,14 +46,14 @@ function moveSnake() {
     if (XHead > 1) {
 
       params.snake.unshift(getElementByCoords(XHead - 1, YHead));
-      params.collectionId.delete(params.snake[0].id);
-      params.collectionId.add((params.snake[params.snake.length - 1]).id);
+      params.idCollection.delete(params.snake[0].id);
+      params.idCollection.add((params.snake[params.snake.length - 1]).id);
       params.snake.pop()
     } else {
 
       params.snake.unshift(getElementByCoords(NUMBER_SQUARES_ROUNDED_X, YHead));
-      params.collectionId.delete(params.snake[0].id);
-      params.collectionId.add((params.snake[params.snake.length - 1]).id);
+      params.idCollection.delete(params.snake[0].id);
+      params.idCollection.add((params.snake[params.snake.length - 1]).id);
       params.snake.pop();
     }
   }
@@ -66,14 +62,14 @@ function moveSnake() {
     if (YHead < NUMBER_SQUARES_ROUNDED_Y) {
 
       params.snake.unshift(getElementByCoords(XHead, YHead + 1));
-      params.collectionId.delete(params.snake[0].id);
-      params.collectionId.add((params.snake[params.snake.length - 1]).id);
+      params.idCollection.delete(params.snake[0].id);
+      params.idCollection.add((params.snake[params.snake.length - 1]).id);
       params.snake.pop();
     } else {
 
       params.snake.unshift(getElementByCoords(XHead, 1));
-      params.collectionId.delete(params.snake[0].id);
-      params.collectionId.add((params.snake[params.snake.length - 1]).id);
+      params.idCollection.delete(params.snake[0].id);
+      params.idCollection.add((params.snake[params.snake.length - 1]).id);
       params.snake.pop();
     }
   }
@@ -82,14 +78,14 @@ function moveSnake() {
     if (YHead > 1) {
 
       params.snake.unshift(getElementByCoords(XHead, YHead - 1));
-      params.collectionId.delete(params.snake[0].id);
-      params.collectionId.add((params.snake[params.snake.length - 1]).id);
+      params.idCollection.delete(params.snake[0].id);
+      params.idCollection.add((params.snake[params.snake.length - 1]).id);
       params.snake.pop();
     } else {
 
       params.snake.unshift(getElementByCoords(XHead, NUMBER_SQUARES_ROUNDED_Y));
-      params.collectionId.delete(params.snake[0].id);
-      params.collectionId.add((params.snake[params.snake.length - 1]).id);
+      params.idCollection.delete(params.snake[0].id);
+      params.idCollection.add((params.snake[params.snake.length - 1]).id);
       params.snake.pop();
     }
   }
