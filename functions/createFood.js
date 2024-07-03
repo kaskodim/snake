@@ -7,8 +7,8 @@ export function createFood() {
   }
 
   const ids = Array.from(params.idCollection);
-  const randCell = Math.floor(Math.random() * ids.length) + 1;
-  const elemRandId = ids[randCell - 1];
+  const randomIndex = Math.floor(Math.random() * ids.length);
+  const elemRandId = ids[randomIndex];
   params.food = document.getElementById(elemRandId);
   params.food.classList.add(CLASS_NAMES.FOOD);
 }
