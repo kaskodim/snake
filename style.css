@@ -12,7 +12,7 @@ body {
   font-size: 20px;
 }
 
-.store {
+.sсore {
   width: 200px;
   height: 50px;
   border: 1px solid blue;
@@ -47,35 +47,57 @@ body {
   background-color: rgba(0, 0, 255, 0.187);
 }
 
-.levelGame {
+.levelsGame {
   display: flex;
   flex-direction: column;
 }
 
-.levelEasy {
+.lebelContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.lebel {
   height: 40px;
+  width: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+}
+
+.lebelContainerEasy {
   background-color: rgba(0, 128, 0, 0.543);
-  display: flex;
-  align-items: center;
 }
 
-.levelMedium {
-  height: 40px;
+.lebelContainerMedium {
   background-color: rgba(255, 255, 0, 0.669);
-  display: flex;
-  align-items: center;
 }
 
-.levelHard {
-  height: 40px;
+.lebelContainerHard {
   background-color: rgba(255, 0, 0, 0.548);
-  display: flex;
-  align-items: center;
 }
 
-.radioText {
-  margin-left: 45px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .start {
   width: 80px;
