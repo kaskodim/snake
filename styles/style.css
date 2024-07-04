@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: antiquewhite;
+  display: flex;
+  margin: 0;
+  user-select: none;
+  font-size: 20px;
+}
+
+.sсore {
+  width: 200px;
+  height: 50px;
+  border: 1px solid blue;
+  position: absolute;
+}
+
+.record {
+  width: 200px;
+  height: 50px;
+  border: 1px solid blue;
+  position: absolute;
+  right: 0;
+}
+
+.menuContainer {
+  max-width: 200px;
+  background-color: rgba(15, 240, 27, 0.324);
+  border: 3px solid rgb(5, 44, 5);
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.logoGame {
+  padding: 20px;
+}
+
+.logoText {
+  padding: 20px;
+  background-color: rgba(0, 0, 255, 0.187);
+}
+
+.levelsGame {
+  display: flex;
+  flex-direction: column;
+}
+
+.lebelContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.lebel {
+  height: 40px;
+  width: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+}
+
+.lebelContainerEasy {
+  background-color: rgba(0, 128, 0, 0.543);
+}
+
+.lebelContainerMedium {
+  background-color: rgba(255, 255, 0, 0.669);
+}
+
+.lebelContainerHard {
+  background-color: rgba(255, 0, 0, 0.548);
+}
+
+.start {
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  margin: 5px auto;
+}

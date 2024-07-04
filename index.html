@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Змейка</title>
-    <link rel="shortcut icon" href="icon.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="shortcut icon" href="./images/icon.png" type="image/png">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/game.css">
+
     <script type="module" src="script.js" defer></script>
 </head>
+
 <body>
-    
+
+    <div class="sсore" id="sсore">sсore: </div>
+    <div class="record" id="record">record:</div>
+
+    <div class="menuContainer" id="menuContainer">
+
+        <img src="./images/logoGame.png" class="logoGame" alt="я - змея"/>
+        <div class="logoText">Game SNAKE</div>
+
+        <div class="levelsGame">
+            <div class="lebelContainer lebelContainerEasy">
+                <label for="levelEasy" class="lebel">
+                    <input type="radio" id="levelEasy" name="levelName" value="levelEasy" checked />
+                    <span>levelEasy</span>
+                </label>
+            </div>
+            <div class="lebelContainer lebelContainerMedium">
+                <label for="levelMedium" class="lebel">
+                    <input type="radio" id="levelMedium" name="levelName" value="levelMedium" />
+                    <span>levelMedium</span>
+                </label>
+            </div>
+            <div class="lebelContainer lebelContainerHard">
+                <label for="levelHard" class="lebel">
+                    <input type="radio" id="levelHard" name="levelName" value="levelHard" />
+                    <span>levelHard</span>
+                </label>
+            </div>
+        </div>
+
+        <button class="start" id="start">Start</button>
+    </div>
 </body>
+
 </html>
