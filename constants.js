@@ -8,10 +8,12 @@ export const settings = {
 };
 
 export const params = {
+    difficultyLevel: '',
     direction: '',
     speed: settings.speedDefault,
     food: null,
     snake: [],
+    arrBlock: [],
     idCollection: new Set(),
 }
 
@@ -21,6 +23,7 @@ export const CLASS_NAMES = {
     SNAKE_HEAD: 'snakeHead',
     SNAKE_BODY: 'snakeBody',
     FOOD: 'food',
+    BLOCK: 'block',
 }
 
 export const MOVE_DIRECTIONS = {

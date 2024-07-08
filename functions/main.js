@@ -8,12 +8,12 @@ import { updateParams } from "./updateParams.js";
 import { params, settings } from "../constants.js";
 
 export function main() {
+
     createField();
     createInitialSnake();
     addStyleSnake();
-    move();
     createFood();
-
+    move();
 
     document.addEventListener('keydown', (event) => {
         if (event.repeat) return;
@@ -26,6 +26,3 @@ export function main() {
         }
     });
 }
-
-
-

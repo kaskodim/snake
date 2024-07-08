@@ -6,6 +6,10 @@ export function createFood() {
     params.idCollection.delete(params.snake[i].id);
   }
 
+  for (let i = 0; i < params.arrBlock.length; i++) {
+    params.idCollection.delete(params.arrBlock[i].id);
+  }
+
   const ids = Array.from(params.idCollection);
   const randomIndex = Math.floor(Math.random() * ids.length);
   const elemRandId = ids[randomIndex];

@@ -5,11 +5,16 @@ import {
     ALL_SQUARES,
     settings,
     params,
+    FIELD_CELL_CENTER_X,
+    FIELD_CELL_CENTER_Y,
 } from "../constants.js";
 
-import { formatId } from './helpers/idHelper.js'
+import { drawSquareLine } from "./drawIt/drawSquareLine.js";
+import { formatId } from './helpers/idHelper.js';
+
 
 export function createField() {
+
     const field = document.createElement('div');
     document.body.append(field);
     field.classList.add(CLASS_NAMES.FIELD);
@@ -35,5 +40,42 @@ export function createField() {
         cell.id = formatId(coordinateX, coordinateY);
         params.idCollection.add(cell.id);
         coordinateX++;
+    }
+
+    if (params.difficultyLevel === 'levelMedium') {
+
+        // верхняя граница игрового поля
+        drawSquareLine(
+            { x: FIELD_CELL_CENTER_X - (FIELD_CELL_CENTER_X - 1), y: NUMBER_SQUARES_ROUNDED_Y },
+            { direction: 'horizontal', quantity: NUMBER_SQUARES_ROUNDED_X, class: CLASS_NAMES.BLOCK }
+        );
+        // левая граница игрового поля
+        drawSquareLine(
+            { x: FIELD_CELL_CENTER_X - (FIELD_CELL_CENTER_X - 1), y: NUMBER_SQUARES_ROUNDED_Y },
+            { direction: 'vertical', quantity: NUMBER_SQUARES_ROUNDED_Y, class: CLASS_NAMES.BLOCK }
+        );
+        // нижняя граница игрового поля
+        drawSquareLine(
+            { x: FIELD_CELL_CENTER_X - (FIELD_CELL_CENTER_X - 1), y: FIELD_CELL_CENTER_Y - (FIELD_CELL_CENTER_Y - 1) },
+            { direction: "horizontal", quantity: NUMBER_SQUARES_ROUNDED_X, class: CLASS_NAMES.BLOCK }
+        );
+        // правая граница игрового поля
+        drawSquareLine(
+            { x: NUMBER_SQUARES_ROUNDED_X, y: NUMBER_SQUARES_ROUNDED_Y },
+            { direction: "vertical", quantity: NUMBER_SQUARES_ROUNDED_Y, class: CLASS_NAMES.BLOCK }
+        );
+        // верхняя линия тоннеля
+        drawSquareLine(
+            { x: FIELD_CELL_CENTER_X - (FIELD_CELL_CENTER_X - 5), y: FIELD_CELL_CENTER_Y + 3 },
+            { direction: 'horizontal', quantity: NUMBER_SQUARES_ROUNDED_X - 8, class: CLASS_NAMES.BLOCK }
+        );
+        // нижняя линия тоннеля
+        drawSquareLine(
+            { x: FIELD_CELL_CENTER_X - (FIELD_CELL_CENTER_X - 5), y: FIELD_CELL_CENTER_Y - 3 },
+            { direction: 'horizontal', quantity: NUMBER_SQUARES_ROUNDED_X - 8, class: CLASS_NAMES.BLOCK }
+        );
+    }
+    else if (params.difficultyLevel === 'levelHard') {
+        console.log("скоро будет");
     }
 }
