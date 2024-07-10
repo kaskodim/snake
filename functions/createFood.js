@@ -1,13 +1,11 @@
 import { CLASS_NAMES, params } from "../constants.js";
+import { gameOverIfNeed } from "./gameOverIfNeed.js";
 
 export function createFood() {
 
-  for (let i = 0; i < params.snake.length; i++) {
-    params.idCollection.delete(params.snake[i].id);
-  }
-
-  for (let i = 0; i < params.arrBlock.length; i++) {
-    params.idCollection.delete(params.arrBlock[i].id);
+  if (params.idCollection.length === 0){
+    gameOverIfNeed();
+    return
   }
 
   const ids = Array.from(params.idCollection);

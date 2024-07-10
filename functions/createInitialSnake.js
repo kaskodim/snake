@@ -10,4 +10,8 @@ export function createInitialSnake() {
     params.snake.push(getElementByCoords(FIELD_CELL_CENTER_X, FIELD_CELL_CENTER_Y));
     params.snake.push(getElementByCoords(FIELD_CELL_CENTER_X - 1, FIELD_CELL_CENTER_Y));
     params.snake.push(getElementByCoords(FIELD_CELL_CENTER_X - 2, FIELD_CELL_CENTER_Y));
+
+    for (let i = 0; i < params.snake.length; i++) {
+        params.idCollection.delete(params.snake[i].id);
+    }
 }

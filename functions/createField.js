@@ -46,17 +46,17 @@ export function createField() {
 
         // верхняя граница игрового поля
         drawSquareLine(
-            { x: FIELD_CELL_CENTER_X - (FIELD_CELL_CENTER_X - 1), y: NUMBER_SQUARES_ROUNDED_Y },
+            { x: 1, y: NUMBER_SQUARES_ROUNDED_Y },
             { direction: 'horizontal', quantity: NUMBER_SQUARES_ROUNDED_X, class: CLASS_NAMES.BLOCK }
         );
         // левая граница игрового поля
         drawSquareLine(
-            { x: FIELD_CELL_CENTER_X - (FIELD_CELL_CENTER_X - 1), y: NUMBER_SQUARES_ROUNDED_Y },
+            { x: 1, y: NUMBER_SQUARES_ROUNDED_Y },
             { direction: 'vertical', quantity: NUMBER_SQUARES_ROUNDED_Y, class: CLASS_NAMES.BLOCK }
         );
         // нижняя граница игрового поля
         drawSquareLine(
-            { x: FIELD_CELL_CENTER_X - (FIELD_CELL_CENTER_X - 1), y: FIELD_CELL_CENTER_Y - (FIELD_CELL_CENTER_Y - 1) },
+            { x: 1, y: 1 },
             { direction: "horizontal", quantity: NUMBER_SQUARES_ROUNDED_X, class: CLASS_NAMES.BLOCK }
         );
         // правая граница игрового поля
@@ -74,6 +74,10 @@ export function createField() {
             { x: FIELD_CELL_CENTER_X - (FIELD_CELL_CENTER_X - 5), y: FIELD_CELL_CENTER_Y - 3 },
             { direction: 'horizontal', quantity: NUMBER_SQUARES_ROUNDED_X - 8, class: CLASS_NAMES.BLOCK }
         );
+
+        for (let i = 0; i < params.arrBlock.length; i++) {
+            params.idCollection.delete(params.arrBlock[i].id);
+        }
     }
     else if (params.difficultyLevel === 'levelHard') {
         console.log("скоро будет");

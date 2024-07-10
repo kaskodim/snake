@@ -1,9 +1,9 @@
 export const settings = {
     cellSizeWidth: 20,
     cellSizeHeight: 20,
-    fieldSizeWidth: 400,
-    fieldSizeHeight: 400,
-    speedDefault: 300,
+    fieldSizeWidth: 120,
+    fieldSizeHeight: 120,
+    speedDefault: 500,
     speedFast: 45,
 };
 
@@ -32,7 +32,7 @@ export const MOVE_DIRECTIONS = {
     UP: 'up',
     DOWN: 'down',
 }
-
+                         // WINDOW.INNERheight
 const NUMBER_SQUARES_X = settings.fieldSizeWidth / settings.cellSizeWidth;
 const NUMBER_SQUARES_Y = settings.fieldSizeHeight / settings.cellSizeHeight;
 
@@ -45,3 +45,4 @@ export const FIELD_CELL_CENTER_Y = Math.round(NUMBER_SQUARES_ROUNDED_Y / 2);
 export const AXIS_X = 'X';
 export const AXIS_Y = 'Y';
 export const SEPARATOR = '-';
+

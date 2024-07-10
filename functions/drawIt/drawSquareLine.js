@@ -13,23 +13,20 @@ import { getElementByCoords } from "../helpers/getElementByCoords.js";
  */
 
 export function drawSquareLine(coords, set) {
-    const temporaryArrayLine = [];
 
     if (set.direction === 'horizontal') {
+
         for (let i = 0; i < set.quantity; i++) {
-            temporaryArrayLine.push(getElementByCoords(coords.x + i, coords.y));
-            temporaryArrayLine[i].classList.add(set.class);
-            params.arrBlock.push(getElementByCoords(coords.x + i, coords.y));
+            const elem = getElementByCoords(coords.x + i, coords.y);
+            elem.classList.add(set.class);
+            params.arrBlock.push(elem);
         }
     } else if (set.direction === 'vertical') {
+
         for (let i = 0; i < set.quantity; i++) {
-            temporaryArrayLine.push(getElementByCoords(coords.x, coords.y - i));
-            temporaryArrayLine[i].classList.add(set.class);
-            params.arrBlock.push(getElementByCoords(coords.x, coords.y - i));
+            const elem = getElementByCoords(coords.x, coords.y - i);
+            elem.classList.add(set.class);
+            params.arrBlock.push(elem);
         }
     }
 }
-
-
-
-
