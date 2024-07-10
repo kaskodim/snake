@@ -1,9 +1,9 @@
 export const settings = {
     cellSizeWidth: 20,
     cellSizeHeight: 20,
-    fieldSizeWidth: 120,
-    fieldSizeHeight: 120,
-    speedDefault: 500,
+    fieldSizeWidth: 400,
+    fieldSizeHeight: 400,
+    speedDefault: 300,
     speedFast: 45,
 };
 
@@ -32,7 +32,7 @@ export const MOVE_DIRECTIONS = {
     UP: 'up',
     DOWN: 'down',
 }
-                         // WINDOW.INNERheight
+
 const NUMBER_SQUARES_X = settings.fieldSizeWidth / settings.cellSizeWidth;
 const NUMBER_SQUARES_Y = settings.fieldSizeHeight / settings.cellSizeHeight;
 
