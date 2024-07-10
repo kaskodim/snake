@@ -10,17 +10,9 @@ import { params, settings } from "../constants.js";
 export function main() {
 
     createField();
-    console.log(params.idCollection);
-
     createInitialSnake();
-    console.log(params.idCollection);
-
     addStyleSnake();
-    console.log(params.idCollection);
-
     createFood();
-    console.log(params.idCollection);
-
     move();
 
     document.addEventListener('keydown', (event) => {

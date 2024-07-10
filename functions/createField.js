@@ -74,10 +74,6 @@ export function createField() {
             { x: FIELD_CELL_CENTER_X - (FIELD_CELL_CENTER_X - 5), y: FIELD_CELL_CENTER_Y - 3 },
             { direction: 'horizontal', quantity: NUMBER_SQUARES_ROUNDED_X - 8, class: CLASS_NAMES.BLOCK }
         );
-
-        for (let i = 0; i < params.arrBlock.length; i++) {
-            params.idCollection.delete(params.arrBlock[i].id);
-        }
     }
     else if (params.difficultyLevel === 'levelHard') {
         console.log("скоро будет");

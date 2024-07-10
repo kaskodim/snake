@@ -29,4 +29,7 @@ export function drawSquareLine(coords, set) {
             params.arrBlock.push(elem);
         }
     }
+    for (let i = 0; i < params.arrBlock.length; i++) {
+        params.idCollection.delete(params.arrBlock[i].id);
+    }
 }
