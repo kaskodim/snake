@@ -8,10 +8,12 @@ export const settings = {
 };
 
 export const params = {
+    difficultyLevel: '',
     direction: '',
     speed: settings.speedDefault,
     food: null,
     snake: [],
+    arrBlock: [],
     idCollection: new Set(),
 }
 
@@ -21,6 +23,7 @@ export const CLASS_NAMES = {
     SNAKE_HEAD: 'snakeHead',
     SNAKE_BODY: 'snakeBody',
     FOOD: 'food',
+    BLOCK: 'block',
 }
 
 export const MOVE_DIRECTIONS = {
@@ -42,3 +45,4 @@ export const FIELD_CELL_CENTER_Y = Math.round(NUMBER_SQUARES_ROUNDED_Y / 2);
 export const AXIS_X = 'X';
 export const AXIS_Y = 'Y';
 export const SEPARATOR = '-';
+

@@ -1,11 +1,7 @@
 import { CLASS_NAMES, params } from "../constants.js";
+import { gameOverIfNeed } from "./gameOverIfNeed.js";
 
 export function createFood() {
-
-  for (let i = 0; i < params.snake.length; i++) {
-    params.idCollection.delete(params.snake[i].id);
-  }
-
   const ids = Array.from(params.idCollection);
   const randomIndex = Math.floor(Math.random() * ids.length);
   const elemRandId = ids[randomIndex];

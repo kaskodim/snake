@@ -38,3 +38,7 @@
     border-radius: 3px;
   }
   
+  .block {
+    background-color: rgb(139, 140, 140);
+    border-radius: 0%;
+  }

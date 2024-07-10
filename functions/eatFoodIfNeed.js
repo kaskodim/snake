@@ -7,7 +7,12 @@ export function eatFoodIfNeed() {
         params.food.classList.remove(CLASS_NAMES.FOOD);
         params.snake[0].classList.remove(CLASS_NAMES.SNAKE_HEAD);
         params.snake.push(params.snake[params.snake.length - 1]);
-        createFood();
-        console.log('здесь будет счетчик');
+        if (params.idCollection.length === 0) {
+            gameOverIfNeed();
+            return
+        } else {
+            createFood();
+            console.log('здесь будет счетчик');
+        }
     }
 }
