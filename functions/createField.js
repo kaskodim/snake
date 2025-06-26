@@ -75,7 +75,4 @@ export function createField() {
             { direction: 'horizontal', quantity: NUMBER_SQUARES_ROUNDED_X - 8, class: CLASS_NAMES.BLOCK }
         );
     }
-    else if (params.difficultyLevel === 'levelHard') {
-        console.log("скоро будет");
-    }
 }
